@@ -172,12 +172,25 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Migrations\201904131824379_CreateTables.cs" />
+    <Compile Include="Migrations\201904131824379_CreateTables.Designer.cs">
+      <DependentUpon>201904131824379_CreateTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data\Cart.cs" />
     <Compile Include="Models\Data\CarWash.cs" />
+    <Compile Include="Models\Data\CarWashReservation.cs" />
+    <Compile Include="Models\Data\Customer.cs" />
     <Compile Include="Models\Data\Discount.cs" />
     <Compile Include="Models\Data\Employee.cs" />
     <Compile Include="Models\Data\EmployeePermission.cs" />
     <Compile Include="Models\Data\Fuel.cs" />
+    <Compile Include="Models\Data\Fueling.cs" />
     <Compile Include="Models\Data\Permission.cs" />
+    <Compile Include="Models\Data\Reservation.cs" />
+    <Compile Include="Models\Data\Service.cs" />
+    <Compile Include="Models\Data\Tank.cs" />
+    <Compile Include="Models\Data\Transaction.cs" />
+    <Compile Include="Models\Data\TransactionDiscount.cs" />
     <Compile Include="Models\Data\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -265,6 +278,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904111924175_InitialMigration.resx">
       <DependentUpon>201904111924175_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904131824379_CreateTables.resx">
+      <DependentUpon>201904131824379_CreateTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

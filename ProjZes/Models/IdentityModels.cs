@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -38,5 +39,20 @@ namespace ProjZes.Models
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<EmployeePermission> EmployeePermissions { get; set; }
+        public virtual DbSet<Fueling> Fuelings { get; set; }
+        public virtual DbSet<Tank> Tanks { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
+        public virtual DbSet<CarWashReservation> CarWashReservations { get; set; }
+        public virtual DbSet<Service> Services { get; set; }
+        public virtual DbSet<Cart> Carts { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }
+        public virtual DbSet<TransactionDiscount> TransactionDiscounts { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
     }
 }
