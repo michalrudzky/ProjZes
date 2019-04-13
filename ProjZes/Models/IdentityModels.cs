@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using ProjZes.Models.Data;
 
 namespace ProjZes.Models
 {
@@ -29,5 +30,13 @@ namespace ProjZes.Models
         {
             return new ApplicationDbContext();
         }
+
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Discount> Discounts { get; set; }
+        public virtual DbSet<CarWash> CarWashes { get; set; }
+        public virtual DbSet<Fuel> Fuels { get; set; }
+        public virtual DbSet<Permission> Permissions { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EmployeePermission> EmployeePermissions { get; set; }
     }
 }
