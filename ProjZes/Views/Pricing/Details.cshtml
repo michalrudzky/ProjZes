@@ -1,0 +1,58 @@
+﻿@model ProjZes.Models.FuelPricing
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>FuelPricing</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Pb95)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pb95)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Pb98)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pb98)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Diesel)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Diesel)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Lpg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Lpg)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

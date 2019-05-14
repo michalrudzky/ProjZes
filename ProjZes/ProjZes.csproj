@@ -45,11 +45,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -172,10 +172,16 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PricingController.cs" />
     <Compile Include="Migrations\201904131824379_CreateTables.cs" />
     <Compile Include="Migrations\201904131824379_CreateTables.Designer.cs">
       <DependentUpon>201904131824379_CreateTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905132006426_PricingModel.cs" />
+    <Compile Include="Migrations\201905132006426_PricingModel.Designer.cs">
+      <DependentUpon>201905132006426_PricingModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CarWashPricing.cs" />
     <Compile Include="Models\Data\Cart.cs" />
     <Compile Include="Models\Data\CarWash.cs" />
     <Compile Include="Models\Data\CarWashReservation.cs" />
@@ -203,6 +209,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\FuelPricing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -263,6 +270,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Pricing\Create.cshtml" />
+    <Content Include="Views\Pricing\Delete.cshtml" />
+    <Content Include="Views\Pricing\Details.cshtml" />
+    <Content Include="Views\Pricing\Edit.cshtml" />
+    <Content Include="Views\Pricing\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904131824379_CreateTables.resx">
       <DependentUpon>201904131824379_CreateTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905132006426_PricingModel.resx">
+      <DependentUpon>201905132006426_PricingModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

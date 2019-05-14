@@ -49,6 +49,9 @@ namespace ProjZes.Models
         public virtual DbSet<Transaction> Transactions { get; set; }
         public virtual DbSet<TransactionDiscount> TransactionDiscounts { get; set; }
 
+        public virtual DbSet<FuelPricing> FuelPricing { get; set; }
+        public virtual DbSet<CarWashPricing> CarWashPricing { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
