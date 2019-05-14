@@ -173,6 +173,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PricingController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Migrations\201904131824379_CreateTables.cs" />
     <Compile Include="Migrations\201904131824379_CreateTables.Designer.cs">
       <DependentUpon>201904131824379_CreateTables.cs</DependentUpon>
@@ -275,6 +276,11 @@
     <Content Include="Views\Pricing\Details.cshtml" />
     <Content Include="Views\Pricing\Edit.cshtml" />
     <Content Include="Views\Pricing\Index.cshtml" />
+    <Content Include="Views\Reservation\Create.cshtml" />
+    <Content Include="Views\Reservation\Delete.cshtml" />
+    <Content Include="Views\Reservation\Details.cshtml" />
+    <Content Include="Views\Reservation\Edit.cshtml" />
+    <Content Include="Views\Reservation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
