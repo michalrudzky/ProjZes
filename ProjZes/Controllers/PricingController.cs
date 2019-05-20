@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ProjZes.Models;
+using ProjZes.Models.ViewModels;
 
 namespace ProjZes.Controllers
 {
@@ -17,7 +18,17 @@ namespace ProjZes.Controllers
         // GET: Pricing
         public ActionResult Index()
         {
-            return View(db.FuelPricing.ToList());
+            var fuel = db.FuelPricing.OrderByDescending(x => x.Id).FirstOrDefault();
+            var carWash = db.CarWashPricing.OrderByDescending(x => x.Id).FirstOrDefault();
+
+            var viewModel = new PricingViewModel()
+            {
+                Fuel = fuel,
+                CarWash = carWash
+            };
+
+            //return View(db.FuelPricing.ToList());
+            return View(viewModel);
         }
 
         // GET: Pricing/Details/5
