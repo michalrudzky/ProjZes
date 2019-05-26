@@ -8,6 +8,7 @@
         public const string CarWashPricing = "Cennik myjni";
         public const string UpdateFuelPrices = "Uaktualnij cennik paliw";
         public const string UpdateCarWashPrices = "Uaktualnij cennik myjni";
+        public const string BackToPricingView = "Powrót do widoku cennika";
 
         // Fuel Pricing
         public const string Pb95 = "PB95";

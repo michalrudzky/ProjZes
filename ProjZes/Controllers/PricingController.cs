@@ -27,37 +27,19 @@ namespace ProjZes.Controllers
                 CarWash = carWash
             };
 
-            //return View(db.FuelPricing.ToList());
             return View(viewModel);
         }
 
-        // GET: Pricing/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            FuelPricing fuelPricing = db.FuelPricing.Find(id);
-            if (fuelPricing == null)
-            {
-                return HttpNotFound();
-            }
-            return View(fuelPricing);
-        }
-
-        // GET: Pricing/Create
-        public ActionResult Create()
+        // GET: Pricing/UpdateFuelPrice
+        public ActionResult UpdateFuelPrice()
         {
             return View();
         }
 
-        // POST: Pricing/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Pricing/UpdateFuelPrice
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Pb95,Pb98,Diesel,Lpg")] FuelPricing fuelPricing)
+        public ActionResult UpdateFuelPrice([Bind(Include = "Id,Pb95,Pb98,Diesel,Lpg")] FuelPricing fuelPricing)
         {
             if (ModelState.IsValid)
             {
@@ -69,61 +51,25 @@ namespace ProjZes.Controllers
             return View(fuelPricing);
         }
 
-        // GET: Pricing/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: Pricing/UpdateCarWashPrice
+        public ActionResult UpdateCarWashPrice()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            FuelPricing fuelPricing = db.FuelPricing.Find(id);
-            if (fuelPricing == null)
-            {
-                return HttpNotFound();
-            }
-            return View(fuelPricing);
+            return View();
         }
 
-        // POST: Pricing/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Pricing/UpdateCarWashPrice
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Pb95,Pb98,Diesel,Lpg")] FuelPricing fuelPricing)
+        public ActionResult UpdateCarWashPrice([Bind(Include = "Id,Washing,Waxing,WashingAndWaxing,Polishing,WashingAndWaxingAndPolishing")] CarWashPricing carWashPricing)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(fuelPricing).State = EntityState.Modified;
+                db.CarWashPricing.Add(carWashPricing);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(fuelPricing);
-        }
 
-        // GET: Pricing/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            FuelPricing fuelPricing = db.FuelPricing.Find(id);
-            if (fuelPricing == null)
-            {
-                return HttpNotFound();
-            }
-            return View(fuelPricing);
-        }
-
-        // POST: Pricing/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            FuelPricing fuelPricing = db.FuelPricing.Find(id);
-            db.FuelPricing.Remove(fuelPricing);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            return View(carWashPricing);
         }
 
         protected override void Dispose(bool disposing)

@@ -273,16 +273,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Pricing\Create.cshtml" />
-    <Content Include="Views\Pricing\Delete.cshtml" />
-    <Content Include="Views\Pricing\Details.cshtml" />
-    <Content Include="Views\Pricing\Edit.cshtml" />
+    <Content Include="Views\Pricing\UpdateFuelPrice.cshtml" />
     <Content Include="Views\Pricing\Index.cshtml" />
     <Content Include="Views\Reservation\Create.cshtml" />
     <Content Include="Views\Reservation\Delete.cshtml" />
     <Content Include="Views\Reservation\Details.cshtml" />
     <Content Include="Views\Reservation\Edit.cshtml" />
     <Content Include="Views\Reservation\Index.cshtml" />
+    <Content Include="Views\Pricing\UpdateCarWashPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
