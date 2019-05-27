@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using ProjZes.Common;
 
 namespace ProjZes.Models
 {
@@ -55,10 +56,10 @@ namespace ProjZes.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = Constants.Password)]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = Constants.RememberMe)]
         public bool RememberMe { get; set; }
     }
 
@@ -72,13 +73,25 @@ namespace ProjZes.Models
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = Constants.Password)]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(Name = Constants.PasswordConfirm)]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = Constants.FirstName)]
+        public string FirstName { get; set; }
+
+        [Display(Name = Constants.LastName)]
+        public string LastName { get; set; }
+
+        [Display(Name = Constants.PhoneNumber)]
+        public string PhoneNumber { get; set; }
+
+        [Display(Name = Constants.Address)]
+        public string Address { get; set; }
     }
 
     public class ResetPasswordViewModel

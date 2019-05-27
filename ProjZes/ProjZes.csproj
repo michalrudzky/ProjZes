@@ -183,6 +183,10 @@
     <Compile Include="Migrations\201905132006426_PricingModel.Designer.cs">
       <DependentUpon>201905132006426_PricingModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905271804457_MoreUserData.cs" />
+    <Compile Include="Migrations\201905271804457_MoreUserData.Designer.cs">
+      <DependentUpon>201905271804457_MoreUserData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\CarWashPricing.cs" />
     <Compile Include="Models\Data\Cart.cs" />
     <Compile Include="Models\Data\CarWash.cs" />
@@ -302,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905132006426_PricingModel.resx">
       <DependentUpon>201905132006426_PricingModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905271804457_MoreUserData.resx">
+      <DependentUpon>201905271804457_MoreUserData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

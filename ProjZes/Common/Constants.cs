@@ -21,5 +21,23 @@
         public const string Polishing = "Nabłyszczanie";
         public const string WashingAndWaxing = "Mycie + Woskowanie";
         public const string WashingAndWaxingAndPolishing = "Mycie + Woskowanie + Nabłyszczanie";
+
+        // User accounts
+        public const string Registration = "Rejestracja";
+        public const string Register = "Zarejestruj";
+        public const string Login = "Logowanie";
+        public const string LogMeIn = "Zaloguj";
+        public const string LogMeOff = "Wyloguj";
+        public const string Password = "Hasło";
+        public const string PasswordConfirm = "Powtórz hasło";
+        public const string RememberMe = "Zapamiętaj";
+        public const string CreateANewAccount = "Utwórz nowe konto.";
+        public const string Hello = "Witaj";
+
+        // User data
+        public const string FirstName = "Imię";
+        public const string LastName = "Nazwisko";
+        public const string Address = "Adres";
+        public const string PhoneNumber = "Numer telefonu";
     }
 }
