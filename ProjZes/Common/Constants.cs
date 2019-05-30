@@ -11,6 +11,7 @@
         public const string BackToPricingView = "Powrót do widoku cennika";
 
         // Fuel Pricing
+        public const string Fuel = "Paliwo";
         public const string Pb95 = "PB95";
         public const string Pb98 = "PB98";
         public const string Lpg = "LPG";
@@ -39,5 +40,11 @@
         public const string LastName = "Nazwisko";
         public const string Address = "Adres";
         public const string PhoneNumber = "Numer telefonu";
+
+        // Loyalty Program
+        public const string LoyaltyProgram = "Program lojalnościowy";
+        public const string CurrentLoyaltyValues = "Aktualne wartości punktowe";
+        public const string SetLoyaltyValues = "Ustal wartości punktowe";
+        public const string BackToPointsView = "Powrót do widoku wartości punktów";
     }
 }

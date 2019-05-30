@@ -172,6 +172,7 @@
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoyaltyPointsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PricingController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\201905271804457_MoreUserData.cs" />
     <Compile Include="Migrations\201905271804457_MoreUserData.Designer.cs">
       <DependentUpon>201905271804457_MoreUserData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905272319598_LoyaltyPointsValues.cs" />
+    <Compile Include="Migrations\201905272319598_LoyaltyPointsValues.Designer.cs">
+      <DependentUpon>201905272319598_LoyaltyPointsValues.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CarWashPricing.cs" />
     <Compile Include="Models\Data\Cart.cs" />
@@ -214,8 +219,10 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LoyaltyValues.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\FuelPricing.cs" />
+    <Compile Include="Models\ViewModels\LoyaltyPointsViewModel.cs" />
     <Compile Include="Models\ViewModels\PricingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -285,6 +292,9 @@
     <Content Include="Views\Reservation\Edit.cshtml" />
     <Content Include="Views\Reservation\Index.cshtml" />
     <Content Include="Views\Pricing\UpdateCarWashPrice.cshtml" />
+    <Content Include="Views\LoyaltyPoints\SetValues.cshtml" />
+    <Content Include="Views\LoyaltyPoints\IndexAdmin.cshtml" />
+    <Content Include="Views\LoyaltyPoints\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -309,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905271804457_MoreUserData.resx">
       <DependentUpon>201905271804457_MoreUserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905272319598_LoyaltyPointsValues.resx">
+      <DependentUpon>201905272319598_LoyaltyPointsValues.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

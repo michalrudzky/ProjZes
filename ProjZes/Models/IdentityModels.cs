@@ -41,7 +41,7 @@ namespace ProjZes.Models
             return new ApplicationDbContext();
         }
 
-        public virtual DbSet<User> Users { get; set; }
+        //public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Discount> Discounts { get; set; }
         public virtual DbSet<CarWash> CarWashes { get; set; }
         public virtual DbSet<Fuel> Fuels { get; set; }
@@ -60,6 +60,7 @@ namespace ProjZes.Models
 
         public virtual DbSet<FuelPricing> FuelPricing { get; set; }
         public virtual DbSet<CarWashPricing> CarWashPricing { get; set; }
+        public virtual DbSet<LoyaltyValues> LoyaltyValues { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

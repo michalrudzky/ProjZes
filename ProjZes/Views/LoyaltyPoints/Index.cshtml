@@ -1,0 +1,27 @@
+﻿@model ProjZes.Models.ViewModels.LoyaltyPointsViewModel
+@using ProjZes.Common
+
+@{
+    ViewBag.Title = Constants.LoyaltyProgram;
+}
+
+@{
+    int fuel = Model.Points / Model.Values.Fuel;
+    int lpg = Model.Points / Model.Values.Lpg;
+    int wash = Model.Points / Model.Values.Washing;
+    int washPlus = Model.Points / Model.Values.WashingPlusWaxing;
+}
+
+<h1>@ViewBag.Title</h1>
+
+
+<h2>Ilość punktów: @Model.Points</h2>
+
+<br />
+
+<h4>Punkty możesz wymienić na:</h4>
+
+<p>@Constants.Lpg: @lpg l</p>
+<p>@Constants.Fuel (benzyna lub diesel): @fuel l</p>
+<p>@Constants.Washing: @wash</p>
+<p>@Constants.WashingAndWaxing: @washPlus</p>
