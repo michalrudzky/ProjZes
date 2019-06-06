@@ -176,6 +176,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PricingController.cs" />
     <Compile Include="Controllers\ReservationController.cs" />
+    <Compile Include="Controllers\UserManagementController.cs" />
     <Compile Include="Migrations\201904131824379_CreateTables.cs" />
     <Compile Include="Migrations\201904131824379_CreateTables.Designer.cs">
       <DependentUpon>201904131824379_CreateTables.cs</DependentUpon>
@@ -191,6 +192,10 @@
     <Compile Include="Migrations\201905272319598_LoyaltyPointsValues.cs" />
     <Compile Include="Migrations\201905272319598_LoyaltyPointsValues.Designer.cs">
       <DependentUpon>201905272319598_LoyaltyPointsValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906052007498_AdminAndEmployeeRoles.cs" />
+    <Compile Include="Migrations\201906052007498_AdminAndEmployeeRoles.Designer.cs">
+      <DependentUpon>201906052007498_AdminAndEmployeeRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CarWashPricing.cs" />
     <Compile Include="Models\Data\Cart.cs" />
@@ -295,6 +300,10 @@
     <Content Include="Views\LoyaltyPoints\SetValues.cshtml" />
     <Content Include="Views\LoyaltyPoints\IndexAdmin.cshtml" />
     <Content Include="Views\LoyaltyPoints\Index.cshtml" />
+    <Content Include="Views\UserManagement\Delete.cshtml" />
+    <Content Include="Views\UserManagement\Details.cshtml" />
+    <Content Include="Views\UserManagement\Edit.cshtml" />
+    <Content Include="Views\UserManagement\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905272319598_LoyaltyPointsValues.resx">
       <DependentUpon>201905272319598_LoyaltyPointsValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906052007498_AdminAndEmployeeRoles.resx">
+      <DependentUpon>201906052007498_AdminAndEmployeeRoles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

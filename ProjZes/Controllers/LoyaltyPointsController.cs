@@ -7,8 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ProjZes.Models;
-using ProjZes.Models.ViewModels;
 using Microsoft.AspNet.Identity;
+using ProjZes.Models.ViewModels;
 
 namespace ProjZes.Controllers
 {
@@ -24,29 +24,28 @@ namespace ProjZes.Controllers
                 .OrderByDescending(x => x.Id)
                 .FirstOrDefault();
 
-            var userId = User.Identity.GetUserId();
-            var user = db.Users.Find(userId);
-            var points = user.Points;
-
-            var viewModel = new LoyaltyPointsViewModel()
+            if (User.IsInRole(Common.Constants.ManagerRole))
             {
-                Points = points,
-                Values = values
-            };
+                return View("IndexAdmin", values);
+            }
+            else
+            {
+                var userId = User.Identity.GetUserId();
+                var user = db.Users.Find(userId);
+                var points = user.Points;
 
-            return View(viewModel);
-        }
+                var viewModel = new LoyaltyPointsViewModel()
+                {
+                    Points = points,
+                    Values = values
+                };
 
-        public ActionResult IndexAdmin()
-        {
-            LoyaltyValues values = db.LoyaltyValues
-                .OrderByDescending(x => x.Id)
-                .FirstOrDefault();
-
-            return View(values);
+                return View("Index", viewModel);
+            }
         }
 
         // GET: LoyaltyPoints/SetValues
+        [Authorize(Roles = Common.Constants.ManagerRole)]
         public ActionResult SetValues()
         {
             return View();
@@ -55,6 +54,7 @@ namespace ProjZes.Controllers
         // POST: LoyaltyPoints/SetValues
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = Common.Constants.ManagerRole)]
         public ActionResult SetValues([Bind(Include = "Id,Fuel,Lpg,Washing,WashingPlusWaxing")] LoyaltyValues loyaltyValues)
         {
             if (ModelState.IsValid)

@@ -1,0 +1,67 @@
+﻿@model ProjZes.Models.ApplicationUser
+
+@using ProjZes.Common
+
+@{
+    ViewBag.Title = Constants.UserData;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>@Model.Email</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Constants.FirstName
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Constants.LastName
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Constants.Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Constants.PhoneNumber
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Points)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Points)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(Constants.EditData, "Edit", new { id = Model.Id }) |
+    @Html.ActionLink(Constants.BackToUserList, "Index")
+</p>

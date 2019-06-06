@@ -2,6 +2,9 @@
 {
     public static class Constants
     {
+        // General
+        public const string ConfirmButton = "Zatwierdź";
+
         // Pricing View
         public const string Pricing = "Cennik";
         public const string FuelPricing = "Cennik paliw";
@@ -36,10 +39,20 @@
         public const string Hello = "Witaj";
 
         // User data
+        public const string Users = "Użytkownicy";
         public const string FirstName = "Imię";
         public const string LastName = "Nazwisko";
         public const string Address = "Adres";
         public const string PhoneNumber = "Numer telefonu";
+        public const string Points = "Punkty";
+        public const string ManagerRole = "Manager";
+        public const string EmployeeRole = "Employee";
+        public const string RegisterEmployee = "Zarejestruj pracownika";
+        public const string UserData = "Dane użytkownika";
+        public const string EditData = "Edytuj dane";
+        public const string SeeData = "Zobacz dane";
+        public const string Delete = "Usuń";
+        public const string BackToUserList = "Powrót do listy użytkowników";
 
         // Loyalty Program
         public const string LoyaltyProgram = "Program lojalnościowy";

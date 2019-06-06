@@ -1,9 +1,9 @@
 ﻿@model ProjZes.Models.ViewModels.PricingViewModel
 
-@using ProjZes.Common
+@using Microsoft.AspNet.Identity
 
 @{ 
-    ViewBag.Title = Constants.Pricing;
+    ViewBag.Title = ProjZes.Common.Constants.Pricing;
 }
 
 
@@ -12,11 +12,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@Constants.Pricing</title>
+    <title>@ProjZes.Common.Constants.Pricing</title>
 </head>
 <body>
     <div>
-        <h1>@Constants.FuelPricing</h1>
+        <h1>@ProjZes.Common.Constants.FuelPricing</h1>
         <table class="table">
             <tr>
                 <th>@Html.DisplayNameFor(model => model.Fuel.Pb95)</th>
@@ -31,16 +31,19 @@
                 <td>@Html.DisplayFor(model => model.Fuel.Lpg)</td>
             </tr>
         </table>
-        <p>
-            <button class="btn btn-default">
-                @Html.ActionLink(Constants.UpdateFuelPrices, "UpdateFuelPrice")
-            </button>
-        </p>
+        @if (User.IsInRole(ProjZes.Common.Constants.ManagerRole))
+        {
+            <p>
+                <button class="btn btn-default">
+                    @Html.ActionLink(ProjZes.Common.Constants.UpdateFuelPrices, "UpdateFuelPrice")
+                </button>
+            </p>
+        }
     </div>
     <br />
     <br />
     <div>
-        <h1>@Constants.CarWashPricing</h1>
+        <h1>@ProjZes.Common.Constants.CarWashPricing</h1>
         <table class="table">
             <tr>
                 <th>@Html.DisplayNameFor(model => model.CarWash.Washing)</th>
@@ -57,11 +60,14 @@
                 <td>@Html.DisplayFor(model => model.CarWash.WashingAndWaxingAndPolishing)</td>
             </tr>
         </table>
-        <p>
-            <button class="btn btn-default">
-                @Html.ActionLink(Constants.UpdateCarWashPrices, "UpdateCarWashPrice")
-            </button>
-        </p>
+        @if (User.IsInRole(ProjZes.Common.Constants.ManagerRole))
+        {
+            <p>
+                <button class="btn btn-default">
+                    @Html.ActionLink(ProjZes.Common.Constants.UpdateCarWashPrices, "UpdateCarWashPrice")
+                </button>
+            </p>
+        }
     </div>
 </body>
 </html>

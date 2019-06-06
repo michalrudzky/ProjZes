@@ -31,6 +31,7 @@ namespace ProjZes.Controllers
         }
 
         // GET: Pricing/UpdateFuelPrice
+        [Authorize(Roles = Common.Constants.ManagerRole)]
         public ActionResult UpdateFuelPrice()
         {
             return View();
@@ -39,6 +40,7 @@ namespace ProjZes.Controllers
         // POST: Pricing/UpdateFuelPrice
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = Common.Constants.ManagerRole)]
         public ActionResult UpdateFuelPrice([Bind(Include = "Id,Pb95,Pb98,Diesel,Lpg")] FuelPricing fuelPricing)
         {
             if (ModelState.IsValid)
@@ -52,6 +54,7 @@ namespace ProjZes.Controllers
         }
 
         // GET: Pricing/UpdateCarWashPrice
+        [Authorize(Roles = Common.Constants.ManagerRole)]
         public ActionResult UpdateCarWashPrice()
         {
             return View();
@@ -60,6 +63,7 @@ namespace ProjZes.Controllers
         // POST: Pricing/UpdateCarWashPrice
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = Common.Constants.ManagerRole)]
         public ActionResult UpdateCarWashPrice([Bind(Include = "Id,Washing,Waxing,WashingAndWaxing,Polishing,WashingAndWaxingAndPolishing")] CarWashPricing carWashPricing)
         {
             if (ModelState.IsValid)
