@@ -15,59 +15,69 @@
     <title>@ProjZes.Common.Constants.Pricing</title>
 </head>
 <body>
-    <div>
-        <h1>@ProjZes.Common.Constants.FuelPricing</h1>
-        <table class="table">
-            <tr>
-                <th>@Html.DisplayNameFor(model => model.Fuel.Pb95)</th>
-                <th>@Html.DisplayNameFor(model => model.Fuel.Pb98)</th>
-                <th>@Html.DisplayNameFor(model => model.Fuel.Diesel)</th>
-                <th>@Html.DisplayNameFor(model => model.Fuel.Lpg)</th>
-            </tr>
-            <tr>
-                <td>@Html.DisplayFor(model => model.Fuel.Pb95)</td>
-                <td>@Html.DisplayFor(model => model.Fuel.Pb98)</td>
-                <td>@Html.DisplayFor(model => model.Fuel.Diesel)</td>
-                <td>@Html.DisplayFor(model => model.Fuel.Lpg)</td>
-            </tr>
-        </table>
-        @if (User.IsInRole(ProjZes.Common.Constants.ManagerRole))
-        {
-            <p>
-                <button class="btn btn-default">
-                    @Html.ActionLink(ProjZes.Common.Constants.UpdateFuelPrices, "UpdateFuelPrice")
-                </button>
-            </p>
-        }
-    </div>
-    <br />
-    <br />
-    <div>
-        <h1>@ProjZes.Common.Constants.CarWashPricing</h1>
-        <table class="table">
-            <tr>
-                <th>@Html.DisplayNameFor(model => model.CarWash.Washing)</th>
-                <th>@Html.DisplayNameFor(model => model.CarWash.Waxing)</th>
-                <th>@Html.DisplayNameFor(model => model.CarWash.WashingAndWaxing)</th>
-                <th>@Html.DisplayNameFor(model => model.CarWash.Polishing)</th>
-                <th>@Html.DisplayNameFor(model => model.CarWash.WashingAndWaxingAndPolishing)</th>
-            </tr>
-            <tr>
-                <td>@Html.DisplayFor(model => model.CarWash.Washing)</td>
-                <td>@Html.DisplayFor(model => model.CarWash.Waxing)</td>
-                <td>@Html.DisplayFor(model => model.CarWash.WashingAndWaxing)</td>
-                <td>@Html.DisplayFor(model => model.CarWash.Polishing)</td>
-                <td>@Html.DisplayFor(model => model.CarWash.WashingAndWaxingAndPolishing)</td>
-            </tr>
-        </table>
-        @if (User.IsInRole(ProjZes.Common.Constants.ManagerRole))
-        {
-            <p>
-                <button class="btn btn-default">
-                    @Html.ActionLink(ProjZes.Common.Constants.UpdateCarWashPrices, "UpdateCarWashPrice")
-                </button>
-            </p>
-        }
-    </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h1 class="pricing-heading">@ProjZes.Common.Constants.FuelPricing</h1>
+                <table class="table">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Fuel.Pb95)</th>
+                        <td>@Html.DisplayFor(model => model.Fuel.Pb95)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Fuel.Pb98)</th>
+                        <td>@Html.DisplayFor(model => model.Fuel.Pb98)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Fuel.Diesel)</th>
+                        <td>@Html.DisplayFor(model => model.Fuel.Diesel)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Fuel.Lpg)</th>
+                        <td>@Html.DisplayFor(model => model.Fuel.Lpg)</td>
+                    </tr>
+                </table>
+                @if (User.IsInRole(ProjZes.Common.Constants.ManagerRole))
+                {
+                    <p class="pricing-button">
+                        <button class="btn btn-default">
+                            @Html.ActionLink(ProjZes.Common.Constants.UpdateFuelPrices, "UpdateFuelPrice")
+                        </button>
+                    </p>
+                }
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <h1 class="pricing-heading">@ProjZes.Common.Constants.CarWashPricing</h1>
+                <table class="table pricing-table">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.CarWash.Washing)</th>
+                        <td>@Html.DisplayFor(model => model.CarWash.Washing)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.CarWash.Waxing)</th>
+                        <td>@Html.DisplayFor(model => model.CarWash.Waxing)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.CarWash.WashingAndWaxing)</th>
+                        <td>@Html.DisplayFor(model => model.CarWash.WashingAndWaxing)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.CarWash.Polishing)</th>
+                        <td>@Html.DisplayFor(model => model.CarWash.Polishing)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.CarWash.WashingAndWaxingAndPolishing)</th>
+                        <td>@Html.DisplayFor(model => model.CarWash.WashingAndWaxingAndPolishing)</td>
+                    </tr>
+                </table>
+                @if (User.IsInRole(ProjZes.Common.Constants.ManagerRole))
+                {
+                    <p class="pricing-button">
+                        <button class="btn btn-default">
+                            @Html.ActionLink(ProjZes.Common.Constants.UpdateCarWashPrices, "UpdateCarWashPrice")
+                        </button>
+                    </p>
+                }
+            </div>            
+        </div>
 </body>
 </html>

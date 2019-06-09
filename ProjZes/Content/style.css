@@ -1,0 +1,54 @@
+﻿body {
+    background-color: #ffffcc;
+}
+
+#home-heading-section {
+    background-color: #ffdf80;
+}
+
+.table {
+    text-align: center;
+}
+
+.table th {
+    text-align: center;
+}
+
+
+/* Contact page */
+
+#company-name {
+    font-size: 1.2em;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 960px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 960px;
+}
+
+
+/* Pricing page */
+
+.pricing-heading {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 7%;
+    color: #1f4684;
+}
+
+.pricing-button {
+    text-align: center;
+}
+
+.pricing-table {
+    font-size: 1em;
+}

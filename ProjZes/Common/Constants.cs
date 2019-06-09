@@ -3,7 +3,10 @@
     public static class Constants
     {
         // General
+        public const string ApplicationName = "Expetropolandex";
         public const string ConfirmButton = "Zatwierdź";
+        public const string Contact = "Kontakt";
+        public const string ContactUs = "Skontaktuj się z nami";
 
         // Pricing View
         public const string Pricing = "Cennik";

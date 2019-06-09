@@ -1,17 +1,18 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Kontakt";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>@ProjZes.Common.Constants.ContactUs</h2>
+<br />
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
+    <em id="company-name">@ProjZes.Common.Constants.ApplicationName</em><br />
+    ul. Jana Pawła II 37<br />
+    31-864 Kraków<br /><br />
+    <abbr title="@ProjZes.Common.Constants.PhoneNumber">tel:</abbr>
+    (070) 012-34-56,<br />
+    (070) 011-22-33
 </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="mapouter">
+    <div class="gmap_canvas"><iframe width="960" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=al.%20Jana%20Paw%C5%82a%20II%2037%20Krak%C3%B3w&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div>
+</div>
